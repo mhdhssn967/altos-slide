@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#0b0f19" />
+  <title>Zen Slide - Alto-style Minimalist Adventure</title>
+  
+  <!-- Google Fonts for minimal aesthetic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Fullscreen Canvas for 2D Procedural Engine -->
+  <canvas id="game-canvas"></canvas>
+
+  <!-- Minimal HUD Overlay -->
+  <div class="hud-container">
+    <div class="top-hud">
+      <div class="score-card">
+        <span class="label">DISTANCE</span>
+        <span id="dist-val" class="value">0<small>m</small></span>
+      </div>
+
+      <div class="trick-banner hidden" id="trick-banner">
+        <span id="trick-text">BACKFLIP +500</span>
+      </div>
+
+      <div class="coins-card">
+        <span class="label">STARS</span>
+        <span id="stars-val" class="value">⭐ 0</span>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- Start Screen Overlay -->
+  <div id="start-modal" class="modal-overlay active">
+    <div class="modal-card">
+      <div class="glow-accent"></div>
+      <div class="title-badge">MINIMAL ADVENTURE</div>
+      <h1 class="modal-title">ZEN SLIDE</h1>
+      <p class="modal-desc">Slide through serene procedural mountains. Jump over rocks, collect stars, and perform backflips in mid-air!</p>
+      
+      <div class="controls-guide">
+        <div class="guide-item">
+          <span class="key">JUMP / HOLD</span>
+          <span class="desc">Tap to jump, Hold in air to FLIP</span>
+        </div>
+        <div class="guide-item">
+          <span class="key">TUCK / DUCK</span>
+          <span class="desc">Hold to gain downhill speed</span>
+        </div>
+      </div>
+
+      <button id="start-btn" class="primary-btn">BEGIN SLIDE</button>
+    </div>
+  </div>
+
+  <!-- Game Over Screen Overlay -->
+  <div id="gameover-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <div class="glow-accent error"></div>
+      <h2 class="modal-title">JOURNEY ENDED</h2>
+      <p class="modal-subtitle">You took a tumble!</p>
+
+      <div class="results-grid">
+        <div class="result-item">
+          <span class="result-label">DISTANCE</span>
+          <span id="final-dist" class="result-value">0m</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">STARS COLLECTED</span>
+          <span id="final-stars" class="result-value">0</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">TRICKS LANDED</span>
+          <span id="final-tricks" class="result-value">0</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">BEST DISTANCE</span>
+          <span id="final-best" class="result-value">0m</span>
+        </div>
+      </div>
+
+      <div id="new-best-badge" class="high-score-banner hidden">
+        🏆 NEW DISTANCE RECORD!
+      </div>
+
+      <button id="restart-btn" class="primary-btn">SLIDE AGAIN</button>
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/audio.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
