@@ -251,10 +251,11 @@ class GameEngine {
 
     const p = this.player;
 
-    // Controlled Speed settings
+    // Controlled Speed settings with progressive difficulty
     p.isTucking = this.keys.tuck;
-    const maxSpeed = p.isTucking ? 7.5 : 5.5;
-    const minSpeed = 3.5;
+    const speedIncrease = Math.min(4.0, this.distance * 0.0005); // Increases by 1 every 2000m, capped at +4.0
+    const maxSpeed = (p.isTucking ? 7.5 : 5.5) + speedIncrease;
+    const minSpeed = 3.5 + speedIncrease;
 
     const slope = this.getSlope(p.x);
     const slopeAngle = this.getSlopeAngle(p.x);
