@@ -74,36 +74,57 @@ body {
   width: 100%;
 }
 
-.score-card, .coins-card {
-  background: rgba(15, 23, 42, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 8px 16px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+.crystal-pills-container {
   display: flex;
-  flex-direction: column;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  gap: 8px;
 }
 
-.label {
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: var(--color-text-sub);
+.crystal-pill {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(18, 24, 38, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  height: 22px;
+  padding-right: 10px;
+  padding-left: 0px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-.value {
-  font-size: 1.4rem;
+.crystal-pill.blue-pill {
+  border-color: rgba(56, 189, 248, 0.35);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 8px rgba(56, 189, 248, 0.15);
+}
+
+.crystal-pill.purple-pill {
+  border-color: rgba(217, 70, 239, 0.35);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 8px rgba(217, 70, 239, 0.15);
+}
+
+.crystal-pill-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-left: -2px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
+}
+
+.crystal-pill-value {
+  font-size: 0.76rem;
   font-weight: 800;
   color: #ffffff;
-}
-
-.value small {
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-left: 2px;
-  color: #cbd5e1;
+  margin-left: 5px;
+  letter-spacing: 0.3px;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+  user-select: none;
 }
 
 /* Trick Banner */
@@ -362,4 +383,43 @@ body {
 /* Utilities */
 .hidden {
   display: none !important;
+}
+
+/* Stylized Start Modal */
+.modal-title.hero-title {
+  font-size: 2.6rem;
+  letter-spacing: 4px;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #fff 0%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.5));
+}
+
+.primary-btn.play-btn {
+  font-size: 1.25rem;
+  padding: 16px 40px;
+  background: linear-gradient(135deg, #0284c7 0%, #0c4a6e 100%);
+  border: 2px solid rgba(56, 189, 248, 0.5);
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.6), inset 0 2px 5px rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  letter-spacing: 2px;
+  border-radius: 28px;
+  transition: all 0.25s ease;
+}
+
+.primary-btn.play-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.7), inset 0 2px 5px rgba(255,255,255,0.3);
+  background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+}
+
+.play-icon {
+  font-size: 1.1rem;
+  text-shadow: 0 0 8px rgba(255,255,255,0.8);
 }
