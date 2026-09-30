@@ -159,7 +159,7 @@ export default function App() {
         <div className="modal-overlay active">
           <div className="modal-card">
             <div className="glow-accent"></div>
-            <h1 className="modal-title hero-title">Alto Run</h1>
+            <img src="/c7e0e027-abce-4c6c-a0b3-6b7ce8d50319.webp" alt="Game Logo" className="hero-image" style={{ width: '100%', maxWidth: '350px', marginBottom: '30px' }} />
             <button className="primary-btn play-btn" onClick={handleStart}>
               <span className="play-icon">▶</span> PLAY
             </button>

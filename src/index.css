@@ -401,22 +401,30 @@ body {
 .primary-btn.play-btn {
   font-size: 1.25rem;
   padding: 16px 40px;
-  background: linear-gradient(135deg, #0284c7 0%, #0c4a6e 100%);
-  border: 2px solid rgba(56, 189, 248, 0.5);
-  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.6), inset 0 2px 5px rgba(255,255,255,0.2);
+  background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
+  border: none;
+  box-shadow: 0 8px 0 #581c87, 0 15px 25px rgba(126, 34, 206, 0.5), inset 0 2px 5px rgba(255,255,255,0.3);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
   letter-spacing: 2px;
   border-radius: 28px;
-  transition: all 0.25s ease;
+  transition: all 0.1s ease;
+  transform: translateY(-4px);
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 .primary-btn.play-btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.7), inset 0 2px 5px rgba(255,255,255,0.3);
-  background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+  transform: translateY(-5px);
+  box-shadow: 0 9px 0 #581c87, 0 18px 30px rgba(126, 34, 206, 0.6), inset 0 2px 5px rgba(255,255,255,0.4);
+  background: linear-gradient(135deg, #b062f8 0%, #8929d6 100%);
+}
+
+.primary-btn.play-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #581c87, 0 5px 10px rgba(126, 34, 206, 0.4), inset 0 2px 5px rgba(255,255,255,0.2);
 }
 
 .play-icon {
